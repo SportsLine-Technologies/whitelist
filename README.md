@@ -13,14 +13,12 @@ The `users.csv` file must have the following format:
 
 ```csv
 username
-testuser1
-testuser2
+3E810860877E2D
+3A810860877E93
 ```
 
 ### Fields:
-- `username` - The username to whitelist (required)
-- `added_date` - Date when user was added (YYYY-MM-DD format)
-- `added_by` - Who added the user (admin identifier)
+- `username` - The username to whitelist (required, this has to be userID from the database, e.g., 3E810860877E9D)
 
 ## Adding Users
 
