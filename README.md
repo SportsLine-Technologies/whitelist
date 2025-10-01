@@ -21,7 +21,6 @@ username
 - `username` - The username to whitelist (required, this has to be userID from the database, e.g., 3E810860877E9D)
 
 ## Adding Users
-
 To add a user to the whitelist:
 
 1. Open `users.csv`
@@ -29,6 +28,35 @@ To add a user to the whitelist:
 3. Save the file
 4. The system will automatically pick up the changes
 5. Alternatively, upload a new users.csv file to replace the existing one
+
+## Validate users.csv format
+
+After saving the new version of users.csv, check:
+
+```
+http://predictex.io/api/validate-whitelist
+```
+
+Verify that isValid is true and that the userCount is accurate:
+
+```json
+{
+  "isValid": true,
+  "userCount": 5,
+  "usernames": [
+    "test_user",
+    "demo_user",
+    "sample_user",
+    "3E1C90A94746AE",
+    "3E810860877E9D"
+  ],
+  "errors": [],
+  "csvContent": "username\ntest_user\ndemo_user\nsample_user\n3E1C90A94746AE\n3E810860877E9D\n",
+  "timestamp": "2025-10-01T18:53:58.122Z",
+  "source": "github"
+}
+```
+
 
 ## API Endpoint
 
