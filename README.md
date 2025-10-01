@@ -29,6 +29,8 @@ To add a user to the whitelist:
 4. The system will automatically pick up the changes
 5. Alternatively, upload a new users.csv file to replace the existing one
 
+It will take around 15 minutes for those changes to reflect on the frontend, but you can immediately validate the format of the file (see below).
+
 ## Validate users.csv format
 
 After saving the new version of users.csv, check:
@@ -60,7 +62,7 @@ Verify that isValid is true and that the userCount is accurate:
 
 ## API Endpoint
 
-The whitelist check is available as a next.js app route at:
+The whitelist endpoint is available as a next.js app route at:
 ```
 GET /api/isWhitelisted?username={username}
 ```
@@ -73,3 +75,5 @@ Response:
   "timestamp": "2024-01-01T00:00:00.000Z"
 }
 ```
+
+Unlike the validation endpoint, this endpoint uses a cache, app users will only get updates around 15 minutes after the users.csv file has been updated.
