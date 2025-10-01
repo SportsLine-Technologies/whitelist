@@ -1,0 +1,2 @@
+# whitelist
+testnet whitelist
