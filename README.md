@@ -12,9 +12,9 @@ This directory contains the whitelist system for the testnet faucet.
 The `users.csv` file must have the following format:
 
 ```csv
-username,added_date,added_by
-testuser1,2024-01-01,admin
-testuser2,2024-01-02,admin
+username
+testuser1
+testuser2
 ```
 
 ### Fields:
@@ -27,7 +27,7 @@ testuser2,2024-01-02,admin
 To add a user to the whitelist:
 
 1. Open `users.csv`
-2. Add a new line with the username, date, and admin
+2. Add a new line with the username
 3. Save the file
 4. The system will automatically pick up the changes
 5. Alternatively, upload a new users.csv file to replace the existing one
